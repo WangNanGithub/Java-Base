@@ -1,4 +1,4 @@
-package com.devil.pro.clone;
+package com.devil.effective.clone.deep;
 public class Address implements Cloneable{  
       
     private String state;  

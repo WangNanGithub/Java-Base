@@ -8,7 +8,7 @@ package com.devil.juc;
  * @version $Id$
  *
  */
-public class TwoThread {
+public class TwoThreadSync {
 
 	private static Object lock = new Object();
 	private static boolean flag = false;
@@ -19,9 +19,8 @@ public class TwoThread {
 			public void run() {
 				while (true) {
 					synchronized (lock) {
-						System.out.println("Thread1");
-
 						if (flag) {
+						    System.out.println("Thread1");
 							flag = false;
 							lock.notify();
 							try {
@@ -41,9 +40,8 @@ public class TwoThread {
 			public void run() {
 				while (true) {
 					synchronized (lock) {
-						System.out.println("Thread2");
-
 						if (!flag) {
+						    System.out.println("Thread2");
 							flag = true;
 							try {
 								lock.notify();

@@ -10,6 +10,15 @@ import org.junit.Test;
  */
 public class TestFun {
 
+    /**
+     * 测试builder模式
+     *
+     * @param 
+     * @return 
+     * @throws 
+     * @author yuansheng
+     * @version 1.0.0
+     */
     @Test
     public void testBuilderModel() {
         // builder模式
@@ -17,6 +26,15 @@ public class TestFun {
         System.out.println(no);
     }
 
+    /**
+     * 测试创建对象对性能的消耗
+     *
+     * @param 
+     * @return 
+     * @throws 
+     * @author yuansheng
+     * @version 1.0.0
+     */
     @Test
     public void testNoUsedObj() {
         // 过多创建对象会增加性能消耗
