@@ -6,6 +6,24 @@ import java.util.List;
 import org.junit.Test;
 
 public class TestArray {
+
+    @Test
+    public void testLowToHeight() {
+        byte b = 0;
+        int i = b;
+        long l = b;
+        float f = b;
+        double d = b;
+
+        // byte a=d; // double比byte高级，不能通过
+
+        char c = 'c';
+        int j = c;
+        System.out.println("output:" + j);
+
+        // byte a =c; // char与byte同级，不能通过
+    }
+
     @Test
     public void test1() {
         ArrayTest<Stu> stu = new ArrayTest<Stu>();
