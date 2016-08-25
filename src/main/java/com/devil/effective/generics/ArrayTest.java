@@ -1,13 +1,5 @@
 package com.devil.effective.generics;
 
-import org.junit.Test;
-
-/**
- * 
- *
- * @author yuansheng
- * @version 1.0.0
- */
 public class ArrayTest<E> {
     public Object[] objs;
     public E[] es;
