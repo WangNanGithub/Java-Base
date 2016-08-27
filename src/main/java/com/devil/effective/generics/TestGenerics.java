@@ -3,6 +3,8 @@ package com.devil.effective.generics;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
@@ -45,6 +47,7 @@ public class TestGenerics {
 		// fun.superE(list);// 编译不通过
 		List<Stu> liStus = new ArrayList<>();
 		FunctionI.superEstatic(liStus); // 编译通过
+		FunctionI.superEstatic(new ArrayList<Stuc>());
 		// 如果不是继承的
 		List<Stu> list2 = new ArrayList<Stu>();
 		list2.add(new Stu());
@@ -64,7 +67,7 @@ public class TestGenerics {
 
 	@Test
 	public void testMaxOne() {
-		FunctionI.maxOne(new ArrayList<Number>()); // Number未实现Comparable<E>接口，报错
+		// FunctionI.maxOne(new ArrayList<Number>()); // Number未实现Comparable<E>接口，报错
 		// <E extends Comparable<E>> E maxOne(List<E> list)
 		// Integer extends Number implements Comparable<Integer> 所以E必须是实现Comparable<E>接口
 		FunctionI.maxOne(new ArrayList<Integer>()); // Integer实现Comparable接口，通过
@@ -72,8 +75,8 @@ public class TestGenerics {
 
 	@Test
 	public void testMaxTwo() {
-		List<ScheduledFuture<?>> sch = null;
-		FunctionI.maxOne(sch); // 普通方法不能通过编译,ScheduledFuture没有实现comparable接口，ps:但是实现Delayed接口，而Delayed接口实现Comparable
+		List<ScheduledFuture<Integer>> sch = null;
+		// FunctionI.maxOne(sch); // 普通方法不能通过编译,ScheduledFuture没有实现comparable接口，ps:但是实现Delayed接口，而Delayed接口实现Comparable
 		// <E extends Comparable<? super E>> E maxTwo(List<? extends E> list)
 		// ScheduledFuture<V> extends Delayed
 		// Delayed extends Comparable<Delayed>
@@ -87,10 +90,12 @@ public class TestGenerics {
 		// Calendar implements Comparable<Calendar>
 		// 这里相当于<GregorianCalendar extends
 		// Comparable<GregorianCalendar>>，但是GregorianCalendar继承了Comparable<Calendar>而不是Comparable<Calendar>
-		Demo1<GregorianCalendar> p = null;
+		// Demo1<GregorianCalendar> p = null;
 		// <GregorianCalendar extends Comparable<Calendar>> T 表示传入的值，？通配符 super
 		// 决定Comparable的类型为Calendar
 		Demo2<GregorianCalendar> p2 = null;
+		
+		Collections.max(new ArrayList<GregorianCalendar>());
 	}
 
 }
