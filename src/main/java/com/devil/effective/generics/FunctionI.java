@@ -4,13 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * 
- *
- * @author yuansheng
- * @version 1.0.0
- * @param <E>
- */
 public class FunctionI<E> {
     // 泛型静态工厂
     public static <K, V> HashMap<K, V> newHashMap() {
