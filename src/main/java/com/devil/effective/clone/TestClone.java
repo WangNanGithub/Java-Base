@@ -7,10 +7,8 @@ import com.devil.effective.clone.deep.Employee;
 import com.devil.effective.clone.shallow.Student;
 
 /**
- * 
+ * 克隆测试
  *
- * @author yuansheng
- * @version 1.0.0
  */
 public class TestClone {
 
