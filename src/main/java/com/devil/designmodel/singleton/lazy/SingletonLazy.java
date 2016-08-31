@@ -1,4 +1,4 @@
-package com.devil.designmodel.singleton;
+package com.devil.designmodel.singleton.lazy;
 
 public class SingletonLazy {
 	private static SingletonLazy uniqueInstance;
