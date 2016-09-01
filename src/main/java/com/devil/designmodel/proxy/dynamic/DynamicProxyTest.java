@@ -12,7 +12,7 @@ public class DynamicProxyTest {
 
 		BusinessBarImpl bbar = new BusinessBarImpl();
 		BusinessBar bb = (BusinessBar) BusinessProxy.factory(bbar);
-		String message = bb.bar("Hello,World");
-		System.out.println(message);
+		bb.bar("Hello,World");
+		bb.barTo("Hello,World");
 	}
 }

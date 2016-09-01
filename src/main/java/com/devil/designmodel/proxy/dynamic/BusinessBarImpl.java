@@ -5,4 +5,10 @@ public class BusinessBarImpl implements BusinessBar {
 		System.out.println("BusinessBarImpl.bar()");
 		return message;
 	}
+
+    @Override
+    public String barTo(String msg) {
+        System.out.println(msg);
+        return msg;
+    }
 }
