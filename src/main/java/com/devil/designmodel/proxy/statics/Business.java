@@ -1,4 +1,4 @@
-package com.devil.designmodel.agency.statics;
+package com.devil.designmodel.proxy.statics;
 
 public interface Business {
 	void doAction();

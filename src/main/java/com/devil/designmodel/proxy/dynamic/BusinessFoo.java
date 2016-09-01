@@ -1,4 +1,4 @@
-package com.devil.designmodel.agency.dynamic;
+package com.devil.designmodel.proxy.dynamic;
 
 public interface BusinessFoo {
 	void foo();

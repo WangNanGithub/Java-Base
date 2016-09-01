@@ -1,9 +1,9 @@
-package com.devil.designmodel.agency.dynamic;
+package com.devil.designmodel.proxy.dynamic;
 
 public class DynamicProxyTest {
 	public static void main(String[] args) throws Throwable {
 		BusinessFooImpl bfoo = new BusinessFooImpl();
-		BusinessFoo bf = (BusinessFoo) BusinessImplProxy.factory(bfoo);
+		BusinessFoo bf = (BusinessFoo) BusinessProxy.factory(bfoo);
 		bf.foo();
 		System.out.println();
 
@@ -11,7 +11,7 @@ public class DynamicProxyTest {
 		System.out.println();
 
 		BusinessBarImpl bbar = new BusinessBarImpl();
-		BusinessBar bb = (BusinessBar) BusinessImplProxy.factory(bbar);
+		BusinessBar bb = (BusinessBar) BusinessProxy.factory(bbar);
 		String message = bb.bar("Hello,World");
 		System.out.println(message);
 	}

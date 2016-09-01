@@ -9,4 +9,4 @@
  *
  *          静态代理
  */
-package com.devil.designmodel.agency.statics;
+package com.devil.designmodel.proxy.statics;

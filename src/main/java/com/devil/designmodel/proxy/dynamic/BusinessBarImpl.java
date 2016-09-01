@@ -1,4 +1,4 @@
-package com.devil.designmodel.agency.dynamic;
+package com.devil.designmodel.proxy.dynamic;
 
 public class BusinessBarImpl implements BusinessBar {
 	public String bar(String message) {

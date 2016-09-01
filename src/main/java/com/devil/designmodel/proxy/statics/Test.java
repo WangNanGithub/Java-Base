@@ -1,4 +1,4 @@
-package com.devil.designmodel.agency.statics;
+package com.devil.designmodel.proxy.statics;
 
 public class Test {
 	public static void main(String[] args) {
