@@ -8,10 +8,10 @@ import java.lang.reflect.Proxy;
  * 
  *          动态生成代理类:通过反射加载结合InvocationHandler实现类的动态代理
  */
-public class BusinessProxy implements InvocationHandler {
+public class JDKProxy implements InvocationHandler {
 	private Object obj;
 
-	BusinessProxy(Object obj) {
+	JDKProxy(Object obj) {
 		this.obj = obj;
 	}
 
@@ -35,6 +35,6 @@ public class BusinessProxy implements InvocationHandler {
 	public static Object factory(Object obj) {
 		Class<?> cls = obj.getClass();
 		return Proxy.newProxyInstance(cls.getClassLoader(), cls.getInterfaces(),
-				new BusinessProxy(obj));
+				new JDKProxy(obj));
 	}
 }
