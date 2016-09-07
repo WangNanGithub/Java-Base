@@ -6,7 +6,7 @@ public abstract class Pizza {
 	String name;
 	String dough;
 	String sauce;
-	ArrayList<String> toppings = new ArrayList<>();
+	ArrayList<String> toppings = new ArrayList<String>();
 
 	public void prepare() {
 		System.out.println("准备：" + name);
