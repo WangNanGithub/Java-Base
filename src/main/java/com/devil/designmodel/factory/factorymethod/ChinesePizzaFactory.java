@@ -1,7 +1,7 @@
 package com.devil.designmodel.factory.factorymethod;
 
-import com.devil.designmodel.factory.staticfactory.ChinesePizza;
-import com.devil.designmodel.factory.staticfactory.Pizza;
+import com.devil.designmodel.factory.model.ChinesePizza;
+import com.devil.designmodel.factory.model.Pizza;
 
 public class ChinesePizzaFactory implements Factory {
 	private ChinesePizza pizza;

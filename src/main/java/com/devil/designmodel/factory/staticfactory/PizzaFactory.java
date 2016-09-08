@@ -1,5 +1,9 @@
 package com.devil.designmodel.factory.staticfactory;
 
+import com.devil.designmodel.factory.model.ChinesePizza;
+import com.devil.designmodel.factory.model.Pizza;
+import com.devil.designmodel.factory.model.USPizza;
+
 public class PizzaFactory {
     private static Pizza pizza;
 

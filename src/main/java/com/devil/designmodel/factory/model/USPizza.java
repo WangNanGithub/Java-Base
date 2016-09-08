@@ -1,4 +1,4 @@
-package com.devil.designmodel.factory.staticfactory;
+package com.devil.designmodel.factory.model;
 
 public class USPizza implements Pizza{
 
@@ -10,6 +10,10 @@ public class USPizza implements Pizza{
     @Override
     public void addFlour() {
         System.out.println("加300克面粉");
+    }
+
+    @Override
+    public void addSeasoning() {
     }
 
 }
