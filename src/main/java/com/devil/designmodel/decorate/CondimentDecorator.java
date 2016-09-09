@@ -2,14 +2,13 @@ package com.devil.designmodel.decorate;
 
 /**
  * 
- * @author ys
- * @date 2016年4月21日 下午4:03:54
- * @version 1.0.0
- *
- *          调料
+ * 调料(装饰者)
  */
-public abstract class CondimentDecorator extends Beverage {
+public abstract class CondimentDecorator implements Beverage {
+    Beverage beverage;
 
-	public abstract String getDescription();
-	
+    public CondimentDecorator(Beverage beberage) {
+        this.beverage = beberage;
+    }
+
 }
