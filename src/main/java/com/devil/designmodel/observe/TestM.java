@@ -2,10 +2,12 @@ package com.devil.designmodel.observe;
 
 public class TestM {
 	public static void main(String[] args) {
-		WeatherData w=new WeatherData();
-		CurrentConditionsDisplay d1=new CurrentConditionsDisplay(w);
-		CurrentConditionsDisplay d2=new CurrentConditionsDisplay(w);
-		w.setMeasurements("吐槽");
-		w.setMeasurements("猫");
+		Student stu = new Student();
+		Teacher teacher = new Teacher();
+		teacher.observStudent(stu);
+		stu.setState("写作业");
+		stu.setState("聊天");
+		stu.setState("读书");
+		stu.setState("玩手机");
 	}
 }
