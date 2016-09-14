@@ -4,10 +4,6 @@ import java.util.ArrayList;
 
 /**
  * 
- * @author ys
- * @date 2016年4月21日 下午3:37:04
- * @version 1.0.0
- *
  *          数据主题，用于管理数据更新，以及对观察者的通知
  */
 public class WeatherData implements Subject {
