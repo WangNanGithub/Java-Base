@@ -2,10 +2,6 @@ package com.devil.designmodel.state.vote;
 
 /**
  * 具体状态类——恶意刷票
- * 
- *
- * @author yuansheng
- * @version 1.0.0
  */
 public class SpiteVoteState implements VoteState {
 

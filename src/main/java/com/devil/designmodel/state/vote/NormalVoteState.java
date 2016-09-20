@@ -2,10 +2,6 @@ package com.devil.designmodel.state.vote;
 
 /**
  * 具体状态类——正常投票
- * 
- *
- * @author yuansheng
- * @version 1.0.0
  */
 public class NormalVoteState implements VoteState {
 

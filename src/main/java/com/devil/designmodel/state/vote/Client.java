@@ -2,10 +2,6 @@ package com.devil.designmodel.state.vote;
 
 /**
  * 客户端类
- * 
- *
- * @author yuansheng
- * @version 1.0.0
  */
 public class Client {
 

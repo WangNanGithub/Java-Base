@@ -5,10 +5,6 @@ import java.util.Map;
 
 /**
  * 环境类
- * 
- *
- * @author yuansheng
- * @version 1.0.0
  */
 public class VoteManager {
     // 持有状体处理对象
@@ -56,4 +52,12 @@ public class VoteManager {
         // 然后转调状态对象来进行相应的操作
         state.vote(user, voteItem, this);
     }
+
+    /**
+     * 投票的校验
+     */
+    public void verifyVote() {
+
+    }
+
 }

@@ -2,10 +2,6 @@ package com.devil.designmodel.state.vote;
 
 /**
  * 抽象状态类
- * 
- *
- * @author yuansheng
- * @version 1.0.0
  */
 public interface VoteState {
     /**
