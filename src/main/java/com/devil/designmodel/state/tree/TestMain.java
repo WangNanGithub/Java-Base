@@ -1,4 +1,4 @@
-package com.devil.designmodel.state;
+package com.devil.designmodel.state.tree;
 
 public class TestMain {
     public static void main(String[] args) {
