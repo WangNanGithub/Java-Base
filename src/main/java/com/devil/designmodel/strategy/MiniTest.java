@@ -13,6 +13,7 @@ public class MiniTest {
 		modelDuck.performFly();
 		modelDuck.setFlyBehavior(new FlyRocketPowered());
 		modelDuck.performFly();
+		modelDuck.performQuack();
 		modelDuck.display();
 	}
 }

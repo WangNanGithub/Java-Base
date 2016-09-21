@@ -13,8 +13,12 @@ public class GrowState implements TreeState {
 
     @Override
     public void handle() {
-        System.out.println("植物长大");
-        tree.setState(tree.states.get("fruit"));
+        if (tree.now < tree.growSize) {
+            System.out.println("植物长大");
+            tree.now++;
+        } else {
+            tree.setState(tree.states.get("fruit"));
+        }
     }
 
 }

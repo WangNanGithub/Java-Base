@@ -3,7 +3,7 @@ package com.devil.designmodel.state;
 /**
  * 结果状态
  */
-public class FruitState implements TreeState{
+public class FruitState implements TreeState {
 
     private Tree tree;
 
@@ -13,8 +13,12 @@ public class FruitState implements TreeState{
 
     @Override
     public void handle() {
-        System.out.println("植物结果");
-        tree.setState(tree.states.get("death"));
+        if (tree.now < (tree.growSize + tree.fruitSize)) {
+            System.out.println("植物结果");
+            tree.now++;
+        } else {
+            tree.setState(tree.states.get("death"));
+        }
     }
 
 }
