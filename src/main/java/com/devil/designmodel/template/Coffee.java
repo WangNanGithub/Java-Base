@@ -1,6 +1,6 @@
 package com.devil.designmodel.template;
 
-public class Coffee extends CaffeineBeverage {
+public class Coffee extends Beverage {
 
 	@Override
 	void brew() {

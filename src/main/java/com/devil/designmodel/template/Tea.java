@@ -1,14 +1,14 @@
 package com.devil.designmodel.template;
 
-public class Tea extends CaffeineBeverage {
+public class Tea extends Beverage {
 
 	@Override
-	void brew() {
+	protected void brew() {
 		System.out.println("放入茶叶");
 	}
 
 	@Override
-	void addCondiments() {
+	protected void addCondiments() {
 		System.out.println("加入柠檬片");
 	}
 
