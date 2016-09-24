@@ -7,6 +7,7 @@ public class TestCMD {
 			runtime.exec("cmd /c start services.msc");
 		} catch (Exception e) {
 			System.out.println("Error!");
+			
 		}
 	}
 }
