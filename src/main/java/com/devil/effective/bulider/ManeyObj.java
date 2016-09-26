@@ -4,12 +4,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-/**
- * 
- *
- * @author yuansheng
- * @version 1.0.0
- */
 public class ManeyObj {
     private final Date birthDate;
 

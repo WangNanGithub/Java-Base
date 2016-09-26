@@ -1,11 +1,5 @@
 package com.devil.effective.bulider;
 
-/**
- * 
- *
- * @author yuansheng
- * @version 1.0.0
- */
 public class NutFacts {
     private final int serSize;
     private final int fat;
