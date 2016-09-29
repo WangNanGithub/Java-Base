@@ -14,10 +14,9 @@ public class Director {
 	}
 
 	public void construct() {
-		builder.bed(1);
-		builder.door(1);
-		builder.window(1);
-		builder.roof(1);
-		builder.wall(4);
+		builder.wall();
+		builder.roof();
+		builder.door();
+		builder.bed();
 	}
 }

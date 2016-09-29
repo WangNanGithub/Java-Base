@@ -2,14 +2,13 @@ package com.devil.designmodel.builder;
 
 public class TestMain {
 	public static void main(String[] args) {
-		Builder builder = new HouseBuilder();
+		System.out.println("开始做木屋=======");
+		Builder builder = new WoodHouseBuilder();
 		Director director = new Director(builder);
 		director.construct();
-
-		System.out.println(builder.getProduct().bed);
-		System.out.println(builder.getProduct().door);
-		System.out.println(builder.getProduct().window);
-		System.out.println(builder.getProduct().roof);
-		System.out.println(builder.getProduct().wall);
+		System.out.println("开始做别墅=======");
+		Builder builder2 = new VillaHouseBuilder();
+		director = new Director(builder2);
+		director.construct();
 	}
 }
