@@ -3,12 +3,6 @@ package com.devil.juc;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * 
- *
- * @author yuansheng
- * @version 1.0.0
- */
 public class TwoThreadLock {
     public static void main(String[] args) {
         PrintThread pt = new PrintThread();

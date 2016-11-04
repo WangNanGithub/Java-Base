@@ -2,11 +2,6 @@ package com.devil.juc;
 
 /**
  * 模仿两个线程交替执行
- * 
- * @author Devil
- * @date 2016年8月21日 下午11:12:30
- * @version $Id$
- *
  */
 public class TwoThreadSync {
 

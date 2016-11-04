@@ -4,12 +4,6 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * 
- *
- * @author yuansheng
- * @version 1.0.0
- */
 public class TwoThreadLock2 {
 
     private static Lock lock = new ReentrantLock();
