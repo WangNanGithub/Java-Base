@@ -8,6 +8,10 @@ import java.util.LinkedList;
 public class RequestQueue {
     private LinkedList<Request> queue = new LinkedList<Request>();
 
+    /**
+     * synchronize加在方法上，相当于将当前Class对象上锁
+     * 
+     */
     public synchronized void addRequest(Request request) {
         queue.add(request); // 加入新的request请求
         notifyAll(); // 通知getRequest方法
