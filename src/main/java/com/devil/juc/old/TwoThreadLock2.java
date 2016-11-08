@@ -1,16 +1,16 @@
-package com.devil.juc;
+package com.devil.juc.old;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
+/**
+ * ReentrantLock与Condition实现交替线程
+ */
 public class TwoThreadLock2 {
 
     private static Lock lock = new ReentrantLock();
     private static Condition ac = lock.newCondition();
     private static Condition bc = lock.newCondition();
-
-    private static boolean flag = false;
 
     public static void main(String[] args) {
         Thread a = new Thread() {

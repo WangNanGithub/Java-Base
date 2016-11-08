@@ -1,4 +1,4 @@
-package com.devil.juc;
+package com.devil.juc.old;
 
 public class WaitTest1 {
 

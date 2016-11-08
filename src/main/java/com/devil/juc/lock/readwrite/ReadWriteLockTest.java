@@ -1,9 +1,9 @@
-package com.devil.juc;
+package com.devil.juc.lock.readwrite;
 
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-public class ReadWriteLockTest1 {
+public class ReadWriteLockTest {
 
     public static void main(String[] args) {
         // 创建账户
@@ -20,12 +20,10 @@ public class ReadWriteLockTest1 {
 }
 
 class User {
-    private String name; // 用户名
     private MyCount myCount; // 所要操作的账户
     private ReadWriteLock myLock; // 执行操作所需的锁对象
 
     User(String name, MyCount myCount) {
-        this.name = name;
         this.myCount = myCount;
         this.myLock = new ReentrantReadWriteLock();
     }

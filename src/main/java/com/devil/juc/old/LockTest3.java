@@ -1,9 +1,8 @@
-package com.devil.juc;
+package com.devil.juc.old;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.Condition;
 
-// LockTest3.java
 // 仓库
 class Depot {
     private int capacity;    // 仓库的容量
