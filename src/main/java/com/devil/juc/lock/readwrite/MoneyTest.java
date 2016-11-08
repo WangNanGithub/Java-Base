@@ -2,8 +2,11 @@ package com.devil.juc.lock.readwrite;
 
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
-public class ReadWriteLockTest {
+/**
+ * 对于金钱的操作，需要保证每次数据的正确性
+ *
+ */
+public class MoneyTest {
 
     public static void main(String[] args) {
         // 创建账户
