@@ -1,10 +1,10 @@
-package com.devil.juc.old;
+package com.devil.juc.lock.condition;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class ConditionTest1 {
+public class WaitTest {
 
     private static Lock lock = new ReentrantLock();
     private static Condition condition = lock.newCondition();

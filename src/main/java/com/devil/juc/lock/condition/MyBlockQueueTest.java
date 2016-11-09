@@ -1,10 +1,63 @@
-package com.devil.juc.old;
+package com.devil.juc.lock.condition;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
-class BoundedBuffer {
+/**
+ * BlockingQueue控制队列满的时候让生产者等待，在队列空的时候让消费者等待。它使用的就是Conditon，可以查看ArrayBlockingQueue源码，put，insert，
+ * take等方法
+ * 
+ *
+ */
+public class MyBlockQueueTest {
+    private static MyBlockQueue bb = new MyBlockQueue();
+
+    public static void main(String[] args) {
+        // 启动10个“写线程”，向MyBlockQueue中不断的写数据(写入0-9)；
+        // 启动10个“读线程”，从MyBlockQueue中不断的读数据。
+        for (int i = 0; i < 10; i++) {
+            new PutThread("p" + i, i).start();
+            new TakeThread("t" + i).start();
+        }
+    }
+
+    static class PutThread extends Thread {
+        private int num;
+
+        public PutThread(String name, int num) {
+            super(name);
+            this.num = num;
+        }
+
+        public void run() {
+            try {
+                Thread.sleep(1); // 线程休眠1ms
+                bb.put(num); // 向MyBlockQueue中写入数据
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    static class TakeThread extends Thread {
+        public TakeThread(String name) {
+            super(name);
+        }
+
+        public void run() {
+            try {
+                Thread.sleep(10); // 线程休眠1ms
+                // Integer num = (Integer) bb.take(); // 从MyBlockQueue中取出数据
+                bb.take();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+class MyBlockQueue {
     final Lock lock = new ReentrantLock();
     final Condition notFull = lock.newCondition();
     final Condition notEmpty = lock.newCondition();
@@ -56,50 +109,6 @@ class BoundedBuffer {
             return x;
         } finally {
             lock.unlock(); // 释放锁
-        }
-    }
-}
-
-public class ConditionTest2 {
-    private static BoundedBuffer bb = new BoundedBuffer();
-
-    public static void main(String[] args) {
-        // 启动10个“写线程”，向BoundedBuffer中不断的写数据(写入0-9)；
-        // 启动10个“读线程”，从BoundedBuffer中不断的读数据。
-        for (int i = 0; i < 10; i++) {
-            new PutThread("p" + i, i).start();
-            new TakeThread("t" + i).start();
-        }
-    }
-
-    static class PutThread extends Thread {
-        private int num;
-
-        public PutThread(String name, int num) {
-            super(name);
-            this.num = num;
-        }
-
-        public void run() {
-            try {
-                Thread.sleep(1); // 线程休眠1ms
-                bb.put(num); // 向BoundedBuffer中写入数据
-            } catch (InterruptedException e) {
-            }
-        }
-    }
-
-    static class TakeThread extends Thread {
-        public TakeThread(String name) {
-            super(name);
-        }
-
-        public void run() {
-            try {
-                Thread.sleep(10); // 线程休眠1ms
-                Integer num = (Integer) bb.take(); // 从BoundedBuffer中取出数据
-            } catch (InterruptedException e) {
-            }
         }
     }
 }

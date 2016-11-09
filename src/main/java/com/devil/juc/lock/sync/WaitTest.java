@@ -1,6 +1,6 @@
-package com.devil.juc.old;
+package com.devil.juc.lock.sync;
 
-public class WaitTest1 {
+public class WaitTest {
 
     public static void main(String[] args) {
 

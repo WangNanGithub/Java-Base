@@ -1,4 +1,4 @@
-package com.devil.juc.old;
+package com.devil.effective.concurrent.pool;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,7 +7,7 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class TaskTest {
-    static ScheduledThreadPoolExecutor stpe = null;
+    static ScheduledThreadPoolExecutor stpe = null; // 池
     static int index;
 
     public static void main(String[] args) {
@@ -17,11 +17,16 @@ public class TaskTest {
         // 隔2秒后开始执行任务，并且在上一次任务开始后隔一秒再执行一次；
         // stpe.scheduleWithFixedDelay(task, 2, 1, TimeUnit.SECONDS);
         // 隔6秒后执行一次，但只会执行一次。
-        MyCallable mc = new MyCallable();
+
+        // 使用时，注释一个，放开另一个
         for (int i = 1; i < 15; i++) {
             stpe.schedule(task, i, TimeUnit.SECONDS);
         }
 
+        MyCallable mc = new MyCallable();
+        for (int i = 0; i < 15; i++) {
+            stpe.schedule(mc, i, TimeUnit.SECONDS);
+        }
     }
 
     private static String getTimes() {

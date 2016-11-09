@@ -1,12 +1,13 @@
-package com.devil.juc.old;
+package com.devil.juc.lock.condition;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * ReentrantLock与Condition实现交替线程
  */
-public class TwoThreadLock2 {
+public class TrunThread {
 
     private static Lock lock = new ReentrantLock();
     private static Condition ac = lock.newCondition();
