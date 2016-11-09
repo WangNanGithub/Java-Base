@@ -1,4 +1,4 @@
-package com.devil.juc.lock.reentrant;
+package com.devil.juc.concurrent.reentrant;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

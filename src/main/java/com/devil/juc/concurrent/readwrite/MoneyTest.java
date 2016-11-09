@@ -1,4 +1,4 @@
-package com.devil.juc.lock.readwrite;
+package com.devil.juc.concurrent.readwrite;
 
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;

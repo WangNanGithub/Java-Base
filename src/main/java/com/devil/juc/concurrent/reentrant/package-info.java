@@ -6,4 +6,4 @@
  * 公平锁：保证在锁的等待队列中的各个线程是公平的，不存在插队情况，对锁的获取是先进先出
  * 非公平锁：申请锁的先出可能插队，后申请的先出可能先拿到锁。但是性能会好很多，无特殊需要，应优先使用非公平锁。
  */
-package com.devil.juc.lock.reentrant;
+package com.devil.juc.concurrent.reentrant;

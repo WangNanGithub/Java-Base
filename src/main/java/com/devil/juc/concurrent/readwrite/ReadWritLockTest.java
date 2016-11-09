@@ -1,4 +1,4 @@
-package com.devil.juc.lock.readwrite;
+package com.devil.juc.concurrent.readwrite;
 
 import java.io.IOException;
 import java.util.concurrent.locks.Lock;

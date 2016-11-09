@@ -1,4 +1,4 @@
-package com.devil.juc.lock.sync;
+package com.devil.juc.concurrent.sync;
 
 public class WaitTest {
 

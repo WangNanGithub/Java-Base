@@ -1,4 +1,4 @@
-package com.devil.juc.lock.condition;
+package com.devil.juc.concurrent.condition;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

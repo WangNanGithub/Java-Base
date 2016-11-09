@@ -1,4 +1,4 @@
-package com.devil.juc.lock.Semaphore;
+package com.devil.juc.concurrent.semaphore;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

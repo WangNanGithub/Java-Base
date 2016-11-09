@@ -1,4 +1,4 @@
-package com.devil.juc.lock.sync;
+package com.devil.juc.concurrent.sync;
 
 /**
  * 模仿两个线程交替执行
