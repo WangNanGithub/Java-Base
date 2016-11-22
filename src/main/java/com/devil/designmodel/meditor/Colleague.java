@@ -4,11 +4,11 @@ package com.devil.designmodel.meditor;
  * 抽象同事类,关联中介
  */
 public abstract class Colleague {
-    protected Mediator mediator;
-    protected String name;
+    protected Mediator mediator; // 绑定中介，可以更换
 
     public Colleague(Mediator mediator) {
         this.mediator = mediator;
+        mediator.addColleague(this );
     }
 
     public Mediator getMediator() {
@@ -17,14 +17,6 @@ public abstract class Colleague {
 
     public void setMediator(Mediator mediator) {
         this.mediator = mediator;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
 }
