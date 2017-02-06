@@ -28,7 +28,6 @@ import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.impl.cookie.BasicClientCookie;
 import org.apache.http.util.EntityUtils;
 
-import com.devil.exception.HttpException;
 import com.devil.utils.ConParams.HttpParams;
 import com.google.common.base.Preconditions;
 
@@ -371,6 +370,22 @@ public class BaseHttpClient {
 
 	public final CookieStore getCookieStore() {
 		return cookieStore;
+	}
+	
+	class HttpException extends Exception {
+		private static final long serialVersionUID = 1L;
+		public static final int code = 101;
+		public static final String message = "Http请求异常:";
+
+		public HttpException(String e) {
+			super(e);
+		}
+
+		@Override
+		public String toString() {
+			return this.getMessage()+"|"+message;
+		}
+
 	}
 
 }

@@ -2,13 +2,14 @@ package com.devil.effective.annotation.inherited;
 
 import java.lang.annotation.Inherited;
 
-/**
- * 
- *
- */
 @Inherited
 public @interface MyParentObj {
-    boolean isInherited() default true; // 设置方法默认值
+	
+	public enum FontColor {
+		BULE, RED, GREEN
+	};
 
-    String doSomething() default "Do what?";
+	String name();
+
+	FontColor fontColor() default FontColor.GREEN; // default表示默认值
 }

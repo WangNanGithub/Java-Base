@@ -1,27 +1,26 @@
 package com.devil.effective.annotation.inherited;
 
+import java.lang.annotation.Annotation;
+
+/**
+ * 如果是实现接口的方式，则需要将所有方法都进行重写
+ *
+ */
 public class MyChildObjOld implements MyParentObj {
-    public boolean isInherited() {
-        return false;
-    }
 
-    public String doSomething() {
-        return "";
-    }
+	@Override
+	public Class<? extends Annotation> annotationType() {
+		return null;
+	}
 
-    public boolean equals(Object obj) {
-        return false;
-    }
+	@Override
+	public String name() {
+		return null;
+	}
 
-    public int hashCode() {
-        return 0;
-    }
+	@Override
+	public FontColor fontColor() {
+		return null;
+	}
 
-    public String toString() {
-        return "";
-    }
-
-    public Class annotationType() {
-        return null;
-    }
 }
