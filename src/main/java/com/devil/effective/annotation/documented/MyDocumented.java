@@ -14,4 +14,5 @@ public @interface MyDocumented {
     public String setFuncName() default "setField";
     public String getFuncName() default "getField"; 
     public boolean defaultDBValue() default false;
+    public String value();
 }
