@@ -8,7 +8,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Types;
-import java.util.Map;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -72,6 +71,7 @@ public class JdbcTest {
         }
     }
 
+    // 预编译
     @Test
     public void testPreparedStatement() throws SQLException {
         PreparedStatement stmt = null;
@@ -124,6 +124,7 @@ public class JdbcTest {
         
         DELIMITER ;
      */
+    // CallableStatement对象这将被用来执行调用数据库存储过程
     @Test
     public void testCallableStatement() throws SQLException{
         CallableStatement stmt = null;
