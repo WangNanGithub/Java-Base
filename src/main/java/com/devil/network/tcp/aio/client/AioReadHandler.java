@@ -1,13 +1,13 @@
 package com.devil.network.tcp.aio.client;
-import java.io.IOException; 
-import java.nio.ByteBuffer; 
-import java.nio.channels.AsynchronousSocketChannel; 
-import java.nio.channels.CompletionHandler; 
-import java.nio.charset.CharacterCodingException; 
-import java.nio.charset.Charset; 
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.channels.AsynchronousSocketChannel;
+import java.nio.channels.CompletionHandler;
+import java.nio.charset.CharacterCodingException;
+import java.nio.charset.Charset;
 import java.nio.charset.CharsetDecoder; 
  
-public class AioReadHandler implements CompletionHandler { 
+public class AioReadHandler implements CompletionHandler<Integer, ByteBuffer> { 
     private AsynchronousSocketChannel socket; 
  
     public AioReadHandler(AsynchronousSocketChannel socket) { 
@@ -46,27 +46,4 @@ public class AioReadHandler implements CompletionHandler {
         System.out.println(exc); 
     }
 
-    /**
-     * 
-     * {@inheritDoc}
-     * @author Administrator
-     * @version 1.0.0
-     */
-    @Override
-    public void completed(Object result, Object attachment) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    /**
-     * 
-     * {@inheritDoc}
-     * @author Administrator
-     * @version 1.0.0
-     */
-    @Override
-    public void failed(Throwable exc, Object attachment) {
-        // TODO Auto-generated method stub
-        
-    } 
 }

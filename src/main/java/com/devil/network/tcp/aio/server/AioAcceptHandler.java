@@ -7,7 +7,7 @@ import java.nio.channels.CompletionHandler;
 import java.util.concurrent.ExecutionException; 
 import java.util.concurrent.Future; 
  
-public class AioAcceptHandler implements CompletionHandler { 
+public class AioAcceptHandler implements CompletionHandler<AsynchronousSocketChannel, AsynchronousServerSocketChannel> { 
     public void cancelled(AsynchronousServerSocketChannel attachment) { 
         System.out.println("cancelled"); 
     } 
@@ -37,27 +37,4 @@ public class AioAcceptHandler implements CompletionHandler {
         } 
     }
 
-    /**
-     * 
-     * {@inheritDoc}
-     * @author Administrator
-     * @version 1.0.0
-     */
-    @Override
-    public void completed(Object result, Object attachment) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    /**
-     * 
-     * {@inheritDoc}
-     * @author Administrator
-     * @version 1.0.0
-     */
-    @Override
-    public void failed(Throwable exc, Object attachment) {
-        // TODO Auto-generated method stub
-        
-    } 
 }

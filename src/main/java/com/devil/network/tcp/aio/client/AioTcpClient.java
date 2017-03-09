@@ -5,8 +5,6 @@ import java.net.InetSocketAddress;
 import java.net.StandardSocketOptions;
 import java.nio.channels.AsynchronousChannelGroup;
 import java.nio.channels.AsynchronousSocketChannel;
-import java.nio.charset.Charset;
-import java.nio.charset.CharsetDecoder;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -19,7 +17,7 @@ public class AioTcpClient {
         asyncChannelGroup = AsynchronousChannelGroup.withThreadPool(executor);
     }
     
-    private final CharsetDecoder decoder = Charset.forName("GBK").newDecoder();
+    // private final CharsetDecoder decoder = Charset.forName("GBK").newDecoder();
     
     public void start(final String ip, final int port)
         throws Exception
