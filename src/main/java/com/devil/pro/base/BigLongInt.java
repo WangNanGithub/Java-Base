@@ -1,7 +1,8 @@
-package com.devil.pro;
+package com.devil.pro.base;
 
 import java.math.BigInteger;
 
+// integer溢出上限，可以使用biginteger
 public class BigLongInt {
 	public static void main(String[] args) {
 		int a = Integer.MAX_VALUE;

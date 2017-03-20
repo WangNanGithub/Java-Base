@@ -1,4 +1,4 @@
-package com.devil.pro;
+package com.devil.pro.base;
 
 public class MathRandom {
 	public static void main(String[] args) {

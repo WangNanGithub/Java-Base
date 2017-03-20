@@ -7,5 +7,6 @@
    <book id="002"> 
       <title>Learning XML</title> 
       <author>Erik T. Ray</author> 
-   </book> 
+   </book>
+   <csdn>12323</csdn>
 </books> 
