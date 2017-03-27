@@ -2,10 +2,6 @@ package com.devil.test;
 
 /**
  * 
- * @author ys
- * @date 2016年4月28日 上午11:33:36
- * @version 1.0.0
- *
  *          对异常的测试（如果是try/cath后的代码还是执行的，但是try中错误代码之后的代码不会执行）
  */
 public class TestExctption {
