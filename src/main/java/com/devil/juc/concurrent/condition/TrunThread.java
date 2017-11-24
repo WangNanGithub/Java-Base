@@ -11,7 +11,6 @@ public class TrunThread {
 
     private static Lock lock = new ReentrantLock();
     private static Condition ac = lock.newCondition();
-    private static Condition bc = lock.newCondition();
 
     public static void main(String[] args) {
         Thread a = new Thread() {
@@ -20,7 +19,7 @@ public class TrunThread {
                     lock.lock();
                     try {
                         System.out.println("Thread1");
-                        bc.signal();
+                        ac.signal();
                         ac.await();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -38,7 +37,7 @@ public class TrunThread {
                     try {
                         System.out.println("Thread2");
                         ac.signal();
-                        bc.await();
+                        ac.await();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     } finally {
